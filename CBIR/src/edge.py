@@ -192,13 +192,13 @@ class Edge(object):
 
 if __name__ == "__main__":
 
-  DB_train_dir_param = "database/train"
+  DB_train_dir_param = "../../ReseauDeNeurones/data/train"
   DB_train_csv_param = "database/data_train.csv"
 
   db_train = Database(DB_train_dir_param, DB_train_csv_param)
   data_train = db_train.get_data()
 
-  DB_test_dir_param = "database/test"
+  DB_test_dir_param = "../../ReseauDeNeurones/data/test"
   DB_test_csv_param = "database/data_test.csv"
 
   db_test = Database(DB_test_dir_param, DB_test_csv_param)
