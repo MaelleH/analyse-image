@@ -219,7 +219,7 @@ class Gabor(object):
 
 
 if __name__ == "__main__":
-  # On crée les deux bases, celle de test et celle de train
+    # On crée les deux bases, celle de test et celle de train
     DB_train_dir_param = "database/train"
     DB_train_csv_param = "database/data_train.csv"
 
