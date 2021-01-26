@@ -126,7 +126,7 @@ def evaluate(db, sample_db_fn, depth=None, d_type='d1'):
 
     samples = sample_db_fn(db)
     for query in samples:
-        ap, _ = infer(query, samples=samples, depth=depth, d_type=d_type)
+        ap, prevision = infer(query, samples=samples, depth=depth, d_type=d_type)
         ret[query['cls']].append(ap)
 
     return ret
@@ -152,7 +152,7 @@ def evaluate_class(db, f_class=None, f_instance=None, depth=None, d_type='d1'):
         f = f_instance
     samples = f.make_samples(db)
     for query in samples:
-        ap, _ = infer(query, samples=samples, depth=depth, d_type=d_type)
+        ap, prevision = infer(query, samples=samples, depth=depth, d_type=d_type)
         ret[query['cls']].append(ap)
 
     return ret

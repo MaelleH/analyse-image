@@ -2,7 +2,7 @@
 
 from __future__ import print_function
 
-from evaluate import evaluate_class
+from evaluate import my_evaluate_class
 from DB import Database
 
 from color import Color
@@ -17,7 +17,7 @@ import os
 d_type = 'd1'
 depth = 30
 
-feat_pools = ['color', 'daisy', 'edge', 'gabor', 'hog', 'vgg', 'res']
+feat_pools = ['color', 'gabor', 'edge'] #'daisy', 'hog', 'vgg', 'res']
 
 # result dir
 result_dir = 'result'
@@ -32,19 +32,19 @@ class FeatureFusion(object):
         self.features = features
         self.samples = None
 
-    def make_samples(self, db, verbose=False):
+    def make_samples(self, db, db_name, verbose=False):
         if verbose:
             print("Use features {}".format(" & ".join(self.features)))
 
         if self.samples == None:
             feats = []
             for f_class in self.features:
-                feats.append(self._get_feat(db, f_class))
+                feats.append(self._get_feat(db, db_name, f_class))
             samples = self._concat_feat(db, feats)
             self.samples = samples  # cache the result
         return self.samples
 
-    def _get_feat(self, db, f_class):
+    def _get_feat(self, db,db_name, f_class):
         if f_class == 'color':
             f_c = Color()
         # elif f_class == 'daisy':
@@ -59,7 +59,7 @@ class FeatureFusion(object):
       f_c = VGGNetFeat()
     elif f_class == 'res':
       f_c = ResNetFeat()"""
-        return f_c.make_samples(db, verbose=False)
+        return f_c.make_samples(db, db_name, verbose=False)
 
     def _concat_feat(self, db, feats):
         samples = feats[0]
@@ -90,16 +90,26 @@ class FeatureFusion(object):
         return ret
 
 
-def evaluate_feats(db, N, feat_pools=feat_pools, d_type='d1', depths=[None, 300, 200, 100, 50, 30, 10, 5, 3, 1]):
+def evaluate_feats(db1, db2, N, feat_pools=feat_pools, d_type='d1', depths=[200, 100, 50, 30, 10, 5, 3, 1]):
     result = open(os.path.join(result_dir, 'feature_fusion-{}-{}feats.csv'.format(d_type, N)), 'w')
     for i in range(N):
         result.write("feat{},".format(i))
     result.write("depth,distance,MMAP")
     combinations = itertools.combinations(feat_pools, N)
     for combination in combinations:
+        sommeBonnesReponsesCombinaison = 0
         fusion = FeatureFusion(features=list(combination))
         for d in depths:
-            APs = evaluate_class(db, f_instance=fusion, d_type=d_type, depth=d)
+            APs, prevision = my_evaluate_class(db1, db2, f_instance=fusion, d_type=d_type, depth=d)
+
+            sommeBonnesReponses = 0
+
+            for i in range(0, len(db_test)):
+                #print("Prevision {}, {}".format(db_test.data.img[i], prevision[i]))
+                if prevision[i] in db_test.data.img[i]:  # Ayant trié les données de tests, je suis en mesure de savoir si mon modèle récupère la bonne réponses. Avec les données rentrées, la moyenne est de 78%
+                    sommeBonnesReponses += 1
+            print("Moyennes bonnes réponses = {}".format(sommeBonnesReponses / len(db_test) * 100))
+            sommeBonnesReponsesCombinaison += sommeBonnesReponses
             cls_MAPs = []
             for cls, cls_APs in APs.items():
                 MAP = np.mean(cls_APs)
@@ -108,37 +118,52 @@ def evaluate_feats(db, N, feat_pools=feat_pools, d_type='d1', depths=[None, 300,
             print(r)
 
             result.write('\n' + r)
-        print()
+        print("Moyennes {} bonnes réponses tout depth= {}".format(",".join(combination), sommeBonnesReponses/len(depths) * 100))
     result.close()
 
 
 if __name__ == "__main__":
-    db = Database()
+    # On crée les deux bases, celle de test et celle de train
+    DB_train_dir_param = "../../ReseauDeNeurones/data/train"
+    DB_train_csv_param = "database/data_train.csv"
+
+    db_train = Database(DB_train_dir_param, DB_train_csv_param)
+    data_train = db_train.get_data()
+
+    DB_test_dir_param = "../../ReseauDeNeurones/data/test"
+    DB_test_csv_param = "database/data_test.csv"
+
+    db_test = Database(DB_test_dir_param, DB_test_csv_param)
+    data_test = db_test.get_data()
 
     # evaluate features double-wise
-    evaluate_feats(db, N=2, d_type='d1')
+    evaluate_feats(db_train,db_test, N=2, d_type='d1')
 
     # evaluate features triple-wise
-    evaluate_feats(db, N=3, d_type='d1')
+    evaluate_feats(db_train,db_test, N=3, d_type='d1')
 
     # evaluate features quadra-wise
-    evaluate_feats(db, N=4, d_type='d1')
+    evaluate_feats(db_train,db_test, N=4, d_type='d1')
 
     # evaluate features penta-wise
-    evaluate_feats(db, N=5, d_type='d1')
+    evaluate_feats(db_train,db_test, N=5, d_type='d1')
 
     # evaluate features hexa-wise
-    evaluate_feats(db, N=6, d_type='d1')
+    evaluate_feats(db_train,db_test, N=6, d_type='d1')
 
     # evaluate features hepta-wise
-    evaluate_feats(db, N=7, d_type='d1')
+    evaluate_feats(db_train,db_test, N=7, d_type='d1')
 
     # evaluate database
-    fusion = FeatureFusion(features=['color'])
-    APs = evaluate_class(db, f_instance=fusion, d_type=d_type, depth=depth)
+    fusion = FeatureFusion(features=['color', 'edge'])
+    APs, prevision = my_evaluate_class(db_train, db_test, f_instance=fusion, d_type=d_type, depth=depth)
     cls_MAPs = []
-    for cls, cls_APs in APs.items():
-        MAP = np.mean(cls_APs)
-        print("Class {}, MAP {}".format(cls, MAP))
-        cls_MAPs.append(MAP)
-    print("MMAP", np.mean(cls_MAPs))
+
+    sommeBonnesReponses = 0
+
+    for i in range(0, len(db_test)):
+        print("Prevision {}, {}".format(db_test.data.img[i], prevision[i]))
+        if prevision[i] in db_test.data.img[i]:  # Ayant trié les données de tests, je suis en mesure de savoir si mon modèle récupère la bonne réponses. Avec les données rentrées, la moyenne est de 78%
+            sommeBonnesReponses += 1
+
+    print("Moyennes bonnes réponses = {}".format(sommeBonnesReponses / len(db_test) * 100))

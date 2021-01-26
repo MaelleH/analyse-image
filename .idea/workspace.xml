@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3047abb-259b-4140-ab8c-05854fd624b0" name="Default Changelist" comment="classe ok">
+    <list default="true" id="f3047abb-259b-4140-ab8c-05854fd624b0" name="Default Changelist" comment="results ok !!!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReseauDeNeurones/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/ReseauDeNeurones/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CBIR/src/evaluate.py" beforeDir="false" afterPath="$PROJECT_DIR$/CBIR/src/evaluate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CBIR/src/fusion.py" beforeDir="false" afterPath="$PROJECT_DIR$/CBIR/src/fusion.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +46,7 @@
       <recent name="C:\Users\hmael\Documents\ENSSAT\IMR3\Analyse_image\ReseauDeNeurones\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.fusion">
     <configuration name="classifier" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Analyse_image" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -94,9 +95,6 @@
       <module name="Analyse_image" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CBIR/src" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -158,10 +156,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.fusion" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.classifier" />
         <item itemvalue="Python.gabor" />
-        <item itemvalue="Python.fusion" />
         <item itemvalue="Python.edge" />
       </list>
     </recent_temporary>
@@ -175,7 +173,9 @@
       <option name="presentableId" value="Default" />
       <updated>1610705301193</updated>
       <workItem from="1610705302339" duration="68000" />
-      <workItem from="1610705376887" duration="8533000" />
+      <workItem from="1610705376887" duration="9238000" />
+      <workItem from="1611646079180" duration="163000" />
+      <workItem from="1611646275716" duration="3270000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1610705399565</created>
@@ -191,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610717785475</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="results ok !!!">
+      <created>1610719196389</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610719196389</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,12 +219,25 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
     <MESSAGE value="classe ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="classe ok" />
+    <MESSAGE value="results ok !!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="results ok !!!" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/CBIR/src/fusion.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Analyse_image$test.coverage" NAME="test Coverage Results" MODIFIED="1610719116885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ReseauDeNeurones" />
+    <SUITE FILE_PATH="coverage/Analyse_image$test.coverage" NAME="test Coverage Results" MODIFIED="1610719176258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ReseauDeNeurones" />
     <SUITE FILE_PATH="coverage/Analyse_image$classifier.coverage" NAME="classifier Coverage Results" MODIFIED="1610710088573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ReseauDeNeurones" />
     <SUITE FILE_PATH="coverage/Analyse_image$DB.coverage" NAME="DB Coverage Results" MODIFIED="1607676249895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CBIR/src" />
+    <SUITE FILE_PATH="coverage/Analyse_image$fusion.coverage" NAME="fusion Coverage Results" MODIFIED="1611649503973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CBIR/src" />
     <SUITE FILE_PATH="coverage/Analyse_image$color.coverage" NAME="color Coverage Results" MODIFIED="1610096216960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CBIR/src" />
   </component>
 </project>
