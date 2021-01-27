@@ -100,7 +100,7 @@ class FeatureFusion(object):
         return ret
 
 
-def evaluate_feats(db1, db2, N, feat_pools=feat_pools, d_type='d1', depths=[200, 100, 50, 30, 10, 5, 3, 1]):
+def  evaluate_feats(db1, db2, N, feat_pools=feat_pools, d_type='d1', depths=[99, 50, 30, 10, 5, 3, 1]):
     result = open(os.path.join(result_dir, 'feature_fusion-{}-{}feats.csv'.format(d_type, N)), 'w')
     for i in range(N):
         result.write("feat{},".format(i))
@@ -145,7 +145,7 @@ if __name__ == "__main__":
     db_test = Database(DB_test_dir_param, DB_test_csv_param)
 
     # evaluate features double-wise
-    evaluate_feats(db_train,db_test, N=2, d_type='d1')
+    evaluate_feats(db_train, db_test, N=2, d_type='d1')
 
     # evaluate features triple-wise
     evaluate_feats(db_train,db_test, N=3, d_type='d1')
