@@ -6,7 +6,6 @@ from evaluate import my_evaluate_class
 from DB import Database
 
 from color import Color
-from daisy import Daisy
 from edge import Edge
 from gabor import Gabor
 
@@ -16,34 +15,45 @@ import os
 
 d_type = 'd1'
 depth = 30
-
-feat_pools = ['color', 'gabor', 'edge'] #'daisy', 'hog', 'vgg', 'res']
+#Ci-dessous, les différents modules recodés permettant de tester la fusion
+feat_pools = ['color', 'edge'] #'gabor', 'daisy', 'hog', 'vgg', 'res']
 
 # result dir
 result_dir = 'result'
 if not os.path.exists(result_dir):
     os.makedirs(result_dir)
 
-
+#Classe permettant de fusionner les classes choisies pour le traitement
 class FeatureFusion(object):
 
     def __init__(self, features):
         assert len(features) > 1, "need to fuse more than one feature!"
         self.features = features
         self.samples = None
+        self.testSamples = None
 
-    def make_samples(self, db, db_name, verbose=False):
+    def make_samples(self, db, db_name, verbose=True):
         if verbose:
             print("Use features {}".format(" & ".join(self.features)))
 
-        if self.samples == None:
-            feats = []
-            for f_class in self.features:
-                feats.append(self._get_feat(db, db_name, f_class))
-            samples = self._concat_feat(db, feats)
-            self.samples = samples  # cache the result
-        return self.samples
+        if db_name == "train":
+            if self.samples is None:
+                feats = []
+                for f_class in self.features:
+                    feats.append(self._get_feat(db, db_name, f_class))
+                samples = self._concat_feat(db, feats)
+                self.samples = samples  # cache the result
+            return self.samples
+        else:
+            if self.testSamples is None:
+                feats = []
+                for f_class in self.features:
+                    feats.append(self._get_feat(db, db_name, f_class))
+                testSamples = self._concat_feat(db, feats)
+                self.testSamples = testSamples  # cache the result
+            return self.testSamples
 
+    #fonction permettant de récuperer la classe en fonction du nom
     def _get_feat(self, db,db_name, f_class):
         if f_class == 'color':
             f_c = Color()
@@ -51,9 +61,9 @@ class FeatureFusion(object):
         # f_c = Daisy()
         elif f_class == 'edge':
             f_c = Edge()
-        elif f_class == 'gabor':
+            """  elif f_class == 'gabor':
             f_c = Gabor()
-            """    elif f_class == 'hog':
+              elif f_class == 'hog':
       f_c = HOG()
     elif f_class == 'vgg':
       f_c = VGGNetFeat()
@@ -109,7 +119,7 @@ def evaluate_feats(db1, db2, N, feat_pools=feat_pools, d_type='d1', depths=[200,
                 if prevision[i] in db_test.data.img[i]:  # Ayant trié les données de tests, je suis en mesure de savoir si mon modèle récupère la bonne réponses. Avec les données rentrées, la moyenne est de 78%
                     sommeBonnesReponses += 1
             print("Moyennes bonnes réponses = {}".format(sommeBonnesReponses / len(db_test) * 100))
-            sommeBonnesReponsesCombinaison += sommeBonnesReponses
+            sommeBonnesReponsesCombinaison += sommeBonnesReponses / len(db_test)
             cls_MAPs = []
             for cls, cls_APs in APs.items():
                 MAP = np.mean(cls_APs)
@@ -118,7 +128,7 @@ def evaluate_feats(db1, db2, N, feat_pools=feat_pools, d_type='d1', depths=[200,
             print(r)
 
             result.write('\n' + r)
-        print("Moyennes {} bonnes réponses tout depth= {}".format(",".join(combination), sommeBonnesReponses/len(depths) * 100))
+        print("Moyennes {} bonnes réponses tout depth= {}".format(",".join(combination), sommeBonnesReponsesCombinaison/len(depths) * 100))
     result.close()
 
 
@@ -128,13 +138,11 @@ if __name__ == "__main__":
     DB_train_csv_param = "database/data_train.csv"
 
     db_train = Database(DB_train_dir_param, DB_train_csv_param)
-    data_train = db_train.get_data()
 
-    DB_test_dir_param = "../../ReseauDeNeurones/data/test"
+    DB_test_dir_param = "../../ReseauDeNeurones/data/test_classés"
     DB_test_csv_param = "database/data_test.csv"
 
     db_test = Database(DB_test_dir_param, DB_test_csv_param)
-    data_test = db_test.get_data()
 
     # evaluate features double-wise
     evaluate_feats(db_train,db_test, N=2, d_type='d1')

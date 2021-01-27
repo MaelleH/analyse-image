@@ -152,7 +152,11 @@ class Edge(object):
           hist[idx] += np.sum(img[hs:he, ws:we] * k)  # element-wise product
   
     if normalize:
-      hist /= np.sum(hist)
+      somme = np.sum(hist)
+      if somme==0:
+        somme = 1
+
+      hist /= somme
   
     return hist
   

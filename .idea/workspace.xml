@@ -1,8 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3047abb-259b-4140-ab8c-05854fd624b0" name="Default Changelist" comment="results ok !!!">
+    <list default="true" id="f3047abb-259b-4140-ab8c-05854fd624b0" name="Default Changelist" comment="fusion ok ?">
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/obj_bonsai/353060.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/obj_bonsai/353061.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/obj_bonsai/353062.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/obj_bonsai/353063.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/obj_bonsai/353064.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/obj_bonsai/353065.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/obj_bonsai/353066.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/obj_bonsai/353067.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/obj_bonsai/353068.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/obj_bonsai/353069.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/obj_bonsai/353070.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/obj_bonsai/353071.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/obj_bonsai/353072.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/obj_bonsai/353073.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/obj_bonsai/353074.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/obj_bonsai/353075.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/obj_bonsai/353076.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/obj_bonsai/353077.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/obj_bonsai/353078.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/obj_bonsai/353079.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/pet_cat/458080.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/pet_cat/458081.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/pet_cat/458082.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/pet_cat/458083.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/pet_cat/458084.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/pet_cat/458085.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/pet_cat/458086.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/pet_cat/458087.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/pet_cat/458088.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/pet_cat/458089.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/pet_cat/458090.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/pet_cat/458091.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/pet_cat/458092.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/pet_cat/458093.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/pet_cat/458094.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/pet_cat/458095.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/pet_cat/458096.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/pet_cat/458097.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/pet_cat/458098.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/pet_cat/458099.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/sc_sunset/191010.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/sc_sunset/191028.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/sc_sunset/191034.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/sc_sunset/345002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/sc_sunset/345014.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/sc_sunset/345015.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/sc_sunset/345016.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/sc_sunset/345018.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/sc_sunset/345023.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/sc_sunset/345024.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/sc_sunset/345028.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/sc_sunset/345030.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/sc_sunset/345031.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/sc_sunset/345033.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/sc_sunset/345036.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/sc_sunset/345039.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/sc_sunset/345040.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/sc_sunset/345041.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/sc_sunset/345042.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/sc_sunset/345043.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_cat/326000.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_cat/326001.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_cat/326002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_cat/326003.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_cat/326004.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_cat/326005.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_cat/326006.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_cat/326007.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_cat/326008.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_cat/326009.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_cat/326010.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_cat/326011.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_cat/326012.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_cat/326013.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_cat/326014.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_cat/326015.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_cat/326016.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_cat/326017.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_cat/326018.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_cat/326019.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_elephant/107080.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_elephant/107081.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_elephant/107082.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_elephant/107083.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_elephant/107084.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_elephant/107085.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_elephant/107086.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_elephant/107087.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_elephant/107088.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_elephant/107089.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_elephant/107090.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_elephant/107091.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_elephant/107092.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_elephant/107093.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_elephant/107094.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_elephant/107095.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_elephant/107096.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_elephant/107097.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_elephant/107098.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/wl_elephant/107099.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CBIR/src/cache/edge-region-stride(1, 1)-n_slice10_test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CBIR/src/cache/edge-region-stride(1, 1)-n_slice10_train" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CBIR/src/cache/gabor-global-theta4-frequency(0.1, 0.5, 0.8)-sigma(1, 3, 5)-bandwidth(0.3, 0.7, 1)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CBIR/src/cache/histogram_cache-region-n_bin12-n_slice3_test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CBIR/src/cache/histogram_cache-region-n_bin12-n_slice3_train" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CBIR/src/database/data_test.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CBIR/src/database/data_train.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CBIR/src/edge.py" beforeDir="false" afterPath="$PROJECT_DIR$/CBIR/src/edge.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CBIR/src/evaluate.py" beforeDir="false" afterPath="$PROJECT_DIR$/CBIR/src/evaluate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CBIR/src/fusion.py" beforeDir="false" afterPath="$PROJECT_DIR$/CBIR/src/fusion.py" afterDir="false" />
     </list>
@@ -37,17 +145,25 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ReseauDeNeurones/data/test_classés/sc_sunset" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hmael\Documents\ENSSAT\IMR3\Analyse_image\ReseauDeNeurones\data\test_classés\sc_sunset" />
+      <recent name="C:\Users\hmael\Documents\ENSSAT\IMR3\Analyse_image\ReseauDeNeurones\data\test_classés\obj_bonsai" />
+      <recent name="C:\Users\hmael\Documents\ENSSAT\IMR3\Analyse_image\ReseauDeNeurones\data\test_classés\pet_cat" />
+      <recent name="C:\Users\hmael\Documents\ENSSAT\IMR3\Analyse_image\ReseauDeNeurones\data\test_classés\wl_elephant" />
+      <recent name="C:\Users\hmael\Documents\ENSSAT\IMR3\Analyse_image\ReseauDeNeurones\data\test_classés\wl_cat" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hmael\Documents\ENSSAT\IMR3\Analyse_image\ReseauDeNeurones\data\test_classés" />
       <recent name="C:\Users\hmael\Documents\ENSSAT\IMR3\Analyse_image\ReseauDeNeurones\data\test" />
       <recent name="C:\Users\hmael\Documents\ENSSAT\IMR3\Analyse_image\ReseauDeNeurones\data" />
     </key>
   </component>
   <component name="RunManager" selected="Python.fusion">
-    <configuration name="classifier" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="color" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Analyse_image" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -55,12 +171,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ReseauDeNeurones" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CBIR/src" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ReseauDeNeurones/classifier.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CBIR/src/color.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -84,7 +200,7 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CBIR/src/edge.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -125,7 +241,7 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CBIR/src/gabor.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -157,10 +273,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.fusion" />
-        <item itemvalue="Python.test" />
-        <item itemvalue="Python.classifier" />
         <item itemvalue="Python.gabor" />
         <item itemvalue="Python.edge" />
+        <item itemvalue="Python.color" />
+        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -175,7 +291,8 @@
       <workItem from="1610705302339" duration="68000" />
       <workItem from="1610705376887" duration="9238000" />
       <workItem from="1611646079180" duration="163000" />
-      <workItem from="1611646275716" duration="3270000" />
+      <workItem from="1611646275716" duration="7248000" />
+      <workItem from="1611731978277" duration="4192000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1610705399565</created>
@@ -198,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610719196389</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fusion ok ?">
+      <created>1611649733857</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1611649733857</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,24 +344,16 @@
     <MESSAGE value="test" />
     <MESSAGE value="classe ok" />
     <MESSAGE value="results ok !!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="results ok !!!" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/CBIR/src/fusion.py</url>
-          <line>2</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="fusion ok ?" />
+    <option name="LAST_COMMIT_MESSAGE" value="fusion ok ?" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Analyse_image$test.coverage" NAME="test Coverage Results" MODIFIED="1610719176258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ReseauDeNeurones" />
+    <SUITE FILE_PATH="coverage/Analyse_image$gabor.coverage" NAME="gabor Coverage Results" MODIFIED="1611650189388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CBIR/src" />
     <SUITE FILE_PATH="coverage/Analyse_image$classifier.coverage" NAME="classifier Coverage Results" MODIFIED="1610710088573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ReseauDeNeurones" />
     <SUITE FILE_PATH="coverage/Analyse_image$DB.coverage" NAME="DB Coverage Results" MODIFIED="1607676249895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CBIR/src" />
-    <SUITE FILE_PATH="coverage/Analyse_image$fusion.coverage" NAME="fusion Coverage Results" MODIFIED="1611649503973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CBIR/src" />
-    <SUITE FILE_PATH="coverage/Analyse_image$color.coverage" NAME="color Coverage Results" MODIFIED="1610096216960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CBIR/src" />
+    <SUITE FILE_PATH="coverage/Analyse_image$fusion.coverage" NAME="fusion Coverage Results" MODIFIED="1611735632738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CBIR/src" />
+    <SUITE FILE_PATH="coverage/Analyse_image$edge.coverage" NAME="edge Coverage Results" MODIFIED="1611650172913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CBIR/src" />
+    <SUITE FILE_PATH="coverage/Analyse_image$color.coverage" NAME="color Coverage Results" MODIFIED="1611650159769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CBIR/src" />
   </component>
 </project>

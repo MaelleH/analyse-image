@@ -179,6 +179,9 @@ def my_evaluate_class(db_train, db_test, f_class=None, f_instance=None, depth=No
         f = f_instance
     samples_train = f.make_samples(db_train, "train")
     samples_test = f.make_samples(db_test, "test")
+
+    print("db1 len {}".format(len(samples_train)))
+    print("db2 len {}".format(len(samples_test)))
     previsions = []
     for query in samples_test:
         ap, prevision = infer(query, samples=samples_train, depth=depth, d_type=d_type)
@@ -186,3 +189,4 @@ def my_evaluate_class(db_train, db_test, f_class=None, f_instance=None, depth=No
         previsions.append(prevision)
 
     return ret, previsions
+
