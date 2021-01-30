@@ -49,6 +49,7 @@ img_width, img_height = 120, 120
 train_data_dir = 'data/train'
 validation_data_dir = 'data/validation'
 
+#On parcourt les dossiers pour connaitre le nombre de samples par dossier
 nbClasses = 5
 total = 0
 for root, dirs, files in os.walk(train_data_dir):

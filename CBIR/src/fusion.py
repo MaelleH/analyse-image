@@ -35,11 +35,12 @@ class FeatureFusion(object):
     def make_samples(self, db, db_name, verbose=True):
         if verbose:
             print("Use features {}".format(" & ".join(self.features)))
-
+        #   Ici, un if a été ajouté afin de permettre aux deux bases de créer le sample. En effet, avant, une seule base était gardée en mémoire ce qui pouvait donner aux tests les valeurs de train.
         if db_name == "train":
             if self.samples is None:
                 feats = []
                 for f_class in self.features:
+                    #Ajout de la classe dans les feats
                     feats.append(self._get_feat(db, db_name, f_class))
                 samples = self._concat_feat(db, feats)
                 self.samples = samples  # cache the result
@@ -53,7 +54,7 @@ class FeatureFusion(object):
                 self.testSamples = testSamples  # cache the result
             return self.testSamples
 
-    #fonction permettant de récuperer la classe en fonction du nom
+    #fonction permettant de récuperer la classe en fonction du nom, suppression de gabor, hog, vgg, res et daisy car ils n'ont pas été adpatés
     def _get_feat(self, db,db_name, f_class):
         if f_class == 'color':
             f_c = Color()
@@ -71,6 +72,7 @@ class FeatureFusion(object):
       f_c = ResNetFeat()"""
         return f_c.make_samples(db, db_name, verbose=False)
 
+    #Cette fonction permet d'ajouter les différentes classes dans feat et de mélanger leurs données
     def _concat_feat(self, db, feats):
         samples = feats[0]
         delete_idx = []
@@ -99,7 +101,7 @@ class FeatureFusion(object):
             }
         return ret
 
-
+#cette fonction permet de decider à quelle classe appartient l'image
 def  evaluate_feats(db1, db2, N, feat_pools=feat_pools, d_type='d1', depths=[99, 50, 30, 10, 5, 3, 1]):
     result = open(os.path.join(result_dir, 'feature_fusion-{}-{}feats.csv'.format(d_type, N)), 'w')
     for i in range(N):
@@ -110,6 +112,7 @@ def  evaluate_feats(db1, db2, N, feat_pools=feat_pools, d_type='d1', depths=[99,
         sommeBonnesReponsesCombinaison = 0
         fusion = FeatureFusion(features=list(combination))
         for d in depths:
+            #On récupère la prévision de classe dans la variable "prévision"
             APs, prevision = my_evaluate_class(db1, db2, f_instance=fusion, d_type=d_type, depth=d)
 
             sommeBonnesReponses = 0
@@ -163,7 +166,10 @@ if __name__ == "__main__":
     evaluate_feats(db_train,db_test, N=7, d_type='d1')
 
     # evaluate database
+
+    #featurefusion permet de mixer les classes pour améliorer le résultat final
     fusion = FeatureFusion(features=['color', 'edge'])
+    #On donne a my evaluate f_instance qui est constitué des classes choisies
     APs, prevision = my_evaluate_class(db_train, db_test, f_instance=fusion, d_type=d_type, depth=depth)
     cls_MAPs = []
 

@@ -65,6 +65,7 @@ def AP(label, results, sort=True):
     return np.mean(precision)
 
 
+# Fonction permettant de choisir la bonne classe pour query  parmit les samples.
 def infer(query, samples=None, db=None, sample_db_fn=None, depth=None, d_type='d1'):
     ''' infer a query, return it's ap
       arguments
@@ -105,6 +106,8 @@ def infer(query, samples=None, db=None, sample_db_fn=None, depth=None, d_type='d
         classes = [sub['cls'] for sub in results]
         weight = [sub['dis'] for sub in results]
         weight = np.reciprocal(weight)
+
+        # On créé un tableau avec les prévsions de sorte à pouvoir les retourner. weighted mode permet de choisir la bonne classe en fonction du poids
         prevision = weighted_mode(classes, weight)
         prevision = np.array_str(prevision[0])[2:-2]
 
@@ -157,7 +160,7 @@ def evaluate_class(db, f_class=None, f_instance=None, depth=None, d_type='d1'):
 
     return ret
 
-
+#Seule fonction modifiée, permet de déduire le type de l'image en fonction de la classe passée en paramêtre
 def my_evaluate_class(db_train, db_test, f_class=None, f_instance=None, depth=None, d_type='d1'):
     """ infer the whole database
 
@@ -177,14 +180,20 @@ def my_evaluate_class(db_train, db_test, f_class=None, f_instance=None, depth=No
         f = f_class()
     elif f_instance:
         f = f_instance
+
+    #Make samples cacule l'histogramme de chaque image et retourne ceux-ci
     samples_train = f.make_samples(db_train, "train")
     samples_test = f.make_samples(db_test, "test")
 
     print("db1 len {}".format(len(samples_train)))
     print("db2 len {}".format(len(samples_test)))
+
+
     previsions = []
+    #On parcourt samples_test et pour chacun on regarde avec les résultats de samples_train qui peut être la bonne classe
     for query in samples_test:
         ap, prevision = infer(query, samples=samples_train, depth=depth, d_type=d_type)
+        #La classe prédite est récupérée dans prévision et retournée en fin de fonction
         ret[query['cls']].append(ap)
         previsions.append(prevision)
 

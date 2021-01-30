@@ -162,7 +162,7 @@ class Edge(object):
   
   
   def make_samples(self, db, dbName, verbose=True):
-
+    #Ici, on rajoute le nom de la base pour le cache, pour permettre d'avoir les deux.
     if h_type == 'global':
       sample_cache = "edge-{}-stride{}_{}".format(h_type, stride, dbName)
     elif h_type == 'region':
@@ -195,7 +195,7 @@ class Edge(object):
 
 
 if __name__ == "__main__":
-
+  #On met en place les deux bases
   DB_train_dir_param = "../../ReseauDeNeurones/data/train"
   DB_train_csv_param = "database/data_train.csv"
 
@@ -216,6 +216,7 @@ if __name__ == "__main__":
   cls_MAPs = []
   sommeBonnesReponses = 0
 
+  #Cette fonction, grâce au tri dans le fichier test, permet d'afficher le taux de bonnes réponses
   for i in range(0, len(db_test)):
     print("Prevision {}, {}".format(db_test.data.img[i], prevision[i]))
     if prevision[i] in db_test.data.img[i]:  # Ayant trié les données de tests, je suis en mesure de savoir si mon modèle récupère la bonne réponses. Avec les données rentrées, la moyenne est de 78%

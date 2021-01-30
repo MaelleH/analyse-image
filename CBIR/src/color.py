@@ -126,13 +126,16 @@ class Color(object):
 
         return hist
 
+    #Cette fonction permet de créer les samples avec les données de la base
     def make_samples(self, db, dbName, verbose=True):
+        # Ici, on rajoute le nom de la base pour le cache, pour permettre d'avoir les deux.
         if h_type == 'global':
             sample_cache = "histogram_cache-{}-n_bin{}_{}".format(h_type, n_bin, dbName)
         elif h_type == 'region':
             sample_cache = "histogram_cache-{}-n_bin{}-n_slice{}_{}".format(h_type, n_bin, n_slice, dbName)
 
         try:
+            #On essaie d'ouvir le fichier, si cela ne marche pas on le crée
             samples = cPickle.load(open(os.path.join(cache_dir, sample_cache), "rb", True))
             if verbose:
                 print("Using cache..., config=%s, distance=%s, depth=%s" % (sample_cache, d_type, depth))
@@ -143,7 +146,11 @@ class Color(object):
             data = db.get_data()
             for d in data.itertuples():
                 d_img, d_cls = getattr(d, "img"), getattr(d, "cls")
+
+                #Création de l'histogramme de l'image
                 d_hist = self.histogram(d_img, type=h_type, n_bin=n_bin, n_slice=n_slice)
+
+                #Ajout des données du sample dans samples
                 samples.append({
                     'img': d_img,
                     'cls': d_cls,
@@ -175,6 +182,7 @@ if __name__ == "__main__":
 
     sommeBonnesReponses = 0
 
+    # Cette fonction, grâce au tri dans le fichier test, permet d'afficher le taux de bonnes réponses
     for i in range(0, len(db_test)):
         print("Prevision {}, {}".format(db_test.data.img[i], prevision[i]))
         if prevision[i] in db_test.data.img[i]: #Ayant trié les données de tests, je suis en mesure de savoir si mon modèle récupère la bonne réponses. Avec les données rentrées, la moyenne est de 78%
